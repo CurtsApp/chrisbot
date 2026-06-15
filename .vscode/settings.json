@@ -1,0 +1,7 @@
+{
+    "rust-analyzer.linkedProjects": [
+        "dashboard/src-tauri/Cargo.toml",
+        "landbot/Cargo.toml",
+        "rcl/Cargo.toml"
+    ]
+}

@@ -8,14 +8,9 @@ mod data_rx;
 
 fn main() {
     // Start background processing
-    println!("Dashboard starting");
-
-    // Spawn workers
     let _ = thread::spawn(data_rx::watch_data);
-    //controller_manager::watch_controller();
     let _ = thread::spawn(controller_manager::watch_controller);
 
+    // This blocks forever
     dashboard_lib::run();
-
-    println!("Dashboard ending");
 }
