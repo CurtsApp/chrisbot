@@ -1,5 +1,4 @@
-use rcl::network_utils::*;
-use std::{net::UdpSocket, thread};
+use std::thread;
 
 use crate::event_manager::process_events;
 
