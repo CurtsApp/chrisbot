@@ -1,5 +1,3 @@
-use std::net::UdpSocket;
-
 use gilrs::{Axis as GilAxis, Button as GilButton, Event, EventType, Gilrs};
 use rcl::{
     controller_utils::{Axis, Button, Controller},
@@ -109,8 +107,6 @@ fn translate_button(button: GilButton) -> Option<Button> {
         GilButton::East => Some(Button::RightButton),
         GilButton::LeftTrigger => Some(Button::LeftBumper),
         GilButton::RightTrigger => Some(Button::RightBumper),
-        GilButton::LeftTrigger2 => Some(Button::LeftBumper),
-        GilButton::RightTrigger2 => Some(Button::RightBumper),
         GilButton::DPadUp => Some(Button::DPadUp),
         GilButton::DPadDown => Some(Button::DPadDown),
         GilButton::DPadLeft => Some(Button::DPadLeft),
